@@ -27,6 +27,20 @@ pipelines:
       - datasets/enriched_accounts
     subgraphs: []
     dependencies: {}
+  pipelines/enrich_accounts_AT:
+    name: enrich_accounts_AT
+    description: ''
+    author: atulanand.2010@gmail.com
+    mode: batch
+    artefactID: ''
+    language: python
+    createdAt: '2024-06-15 14:40:21'
+    datasets:
+      inputs:
+      - gitUri=http://gitserver:3000/wvwrv9bI_team_5938/wvwrv9bI_project_13587.git&subPath=&tag=course_lab_sources/0.0.3&projectSubscriptionProjectId=13587&path=datasets/salesforce-Account
+      outputs: []
+    subgraphs: []
+    dependencies: {}
 datasets:
   datasets/enriched_accounts:
     name: enriched_accounts
@@ -66,27 +80,27 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
-- modifiedAt: '2024-06-04T15:34:46.712996Z'
+- type: plibMaven
+  modifiedAt: '2024-06-15T14:40:24.385145Z'
   name: plibMaven
-  version: 7.1.102
-  id: '856448051'
-  createdAt: '2024-06-04T15:34:46.712996Z'
-  type: plibMaven
-- modifiedAt: '2024-06-04T15:34:46.712996Z'
+  version: 8.0.11
+  id: '1847607121'
+  createdAt: '2024-06-15T14:40:24.385073Z'
+- type: plibPypi
+  modifiedAt: '2024-06-15T14:40:24.385181Z'
   name: plibPypi
-  version: 1.8.19
-  id: '174856929'
-  createdAt: '2024-06-04T15:34:46.712996Z'
-  type: plibPypi
+  version: 1.9.5
+  id: '1426444887'
+  createdAt: '2024-06-15T14:40:24.385173Z'
 projectDependencies:
   '12654':
     projectUID: 12654
     projectName: ProphecySparkBasicsPython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12654.git&subPath=
-    version: 0.2.14
+    version: 0.2.25
     isDefault: true
     author: null
-    createdAt: '2024-06-04 15:34:18'
+    createdAt: '2024-06-15 14:45:17'
   '13587':
     projectUID: 13587
     projectName: course_lab_sources
@@ -99,10 +113,10 @@ projectDependencies:
     projectUID: 12655
     projectName: ProphecyWarehousePython
     repositoryPath: gitUri=http://gitserver:3000/DxEheDCJ_team_5751/DxEheDCJ_project_12655.git&subPath=
-    version: 0.0.6
+    version: 0.0.8
     isDefault: true
     author: null
-    createdAt: '2024-06-04 15:34:18'
+    createdAt: '2024-06-15 14:45:27'
 flags:
   shouldAddDefaultDependenciesIfAbsent: true
 pipelineConfigurations: {}
